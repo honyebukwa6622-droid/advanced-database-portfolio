@@ -1,0 +1,2 @@
+database_name,postgresql_version,connected_to_recovery_server,customers,sales_orders,catalogue_documents
+postgres,17.11,false,100,20000,3
