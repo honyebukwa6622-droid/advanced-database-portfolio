@@ -3,3 +3,5 @@ MarketBridge is a simulated Nigerian online retail platform. Customers browse pr
 A customer can place many orders, and each order belongs to one customer. An order can contain several products, so order_item connects orders to products and records the quantity and checkout price. The same product can appear in many orders. Each inventory row belongs to one product, and the application creates an inventory row when it creates a product.
 
 Normalisation. Each order item stores one product, one quantity and one unit price, satisfying first normal form. The quantity and checkout price depend on the combination of order_id and product_id, satisfying second normal form. Customer details and product details are stored in their own tables, supporting third normal form. The checkout price stays on the order item because it records what the customer paid at the time of purchase.
+
+![MarketBridge entity relationship diagram](marketbridge-erd.png)
