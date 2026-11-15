@@ -2,6 +2,9 @@
 
 **MIT 8103 | Advanced Database Systems | Individual Practical Portfolio**
 
+**GitHub repository** [MarketBridge Advanced Database Systems Portfolio](https://github.com/honyebukwa6622-droid/advanced-database-portfolio)
+
+
 ## Case study
 
 MarketBridge is a simulated Nigerian online retail platform. Customers browse products, place orders and check their order history. Store staff maintain product listings and inventory, while fulfilment staff process orders.
