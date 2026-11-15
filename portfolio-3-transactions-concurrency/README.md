@@ -29,17 +29,15 @@ The rollback test showed that the transaction could see its own stock
 deduction. After `ROLLBACK`, a separate query confirmed that the original
 quantity of 1 had been restored.
 
-## Concurrency analysis
 
-Both checkout screenshots show a row returned by `INSERT ... RETURNING`.
-A returned row records the statement result within its transaction.
-The screenshots do not establish whether either order was committed or
-whether the second checkout waited on the first transaction's row lock.
+## Verification results
 
-To verify concurrent checkout, run the two transactions on separate,
-persistent PostgreSQL connections. Start with one unit. Leave the first
-transaction open after it reserves the unit, then start the second checkout.
-After the first transaction commits, the second should return zero rows
-because PostgreSQL rechecks the stock condition. Verify the result from a
-separate connection by checking that stock is zero and only one order from
-that test was committed.
+Product 101 started with one unit. Inside the rollback test, the stock
+dropped to zero. A separate query after `ROLLBACK` showed one unit again,
+confirming that the stock deduction was undone.
+
+The checkout statements returned order IDs 20001 and 20002. A subsequent
+verification query showed one unit still in stock and no matching order
+items for either ID. The available results verify rollback. The commit
+and concurrent checkout tests still require separate evidence.
+
