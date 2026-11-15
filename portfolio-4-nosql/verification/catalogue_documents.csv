@@ -1,0 +1,4 @@
+sku,product_name,category,attributes
+MB-CBL-001,USB-C Cable,Accessories,"{""length_m"":2,""connector"":""USB-C""}"
+MB-CHG-001,USB-C Wall Charger,Accessories,"{""wattage"":30,""connector"":""USB-C""}"
+MB-SHT-001,Cotton T-Shirt,Clothing,"{""size"":""M"",""fabric"":""Cotton""}"
